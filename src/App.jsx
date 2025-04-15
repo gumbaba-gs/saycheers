@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import saycheersimg1 from "./images/saycheersimg1.png";
 import aboutsayhi from "./images/australia-collage-with-photos.jpg";
@@ -8,38 +8,57 @@ import opera from "./images/opera.jpeg";
 import bondi from "./images/bondi.jpeg";
 import reef from "./images/reef.jpeg";
 import ullru from "./images/ullru.jpeg";
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <header>
         <div className="container">
           <div className="navbar">
             <div className="logo">
-              {/* <img src="/api/placeholder/50/50" alt="Say Cheers Logo" /> */}
               <div className="logo-text">
                 Say<span>Cheers</span>
               </div>
             </div>
-            <nav>
+            
+            <div className="mobile-menu-button" onClick={toggleMenu}>
+              <div className={`menu-icon ${menuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            
+            <nav className={menuOpen ? 'active' : ''}>
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <a href="#home" onClick={closeMenu}>Home</a>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <a href="#about" onClick={closeMenu}>About</a>
                 </li>
                 <li>
-                  <a href="#how-it-works">How It Works</a>
+                  <a href="#how-it-works" onClick={closeMenu}>How It Works</a>
                 </li>
                 <li>
-                  <a href="#locations">Locations</a>
+                  <a href="#locations" onClick={closeMenu}>Locations</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="#contact" onClick={closeMenu}>Contact</a>
                 </li>
               </ul>
             </nav>
-            <a href="#locations" className="btn">
+            <a href="#locations" className="btn find-booth-btn">
               Find a Booth
             </a>
           </div>
@@ -353,20 +372,6 @@ function App() {
                 <strong>Operating Hours:</strong> Our booths are typically open
                 during venue operating hours
               </p>
-              {/* <div className="social-links">
-                <a href="#" className="social-link">
-                  FB
-                </a>
-                <a href="#" className="social-link">
-                  IG
-                </a>
-                <a href="#" className="social-link">
-                  TW
-                </a>
-                <a href="#" className="social-link">
-                  TK
-                </a>
-              </div> */}
             </div>
             <div className="contact-form">
               <form
@@ -473,20 +478,6 @@ function App() {
                 memories in a single photo. The perfect souvenir for your
                 Australian adventure!
               </p>
-              {/* <div className="social-links">
-                <a href="#" className="social-link">
-                  FB
-                </a>
-                <a href="#" className="social-link">
-                  IG
-                </a>
-                <a href="#" className="social-link">
-                  TW
-                </a>
-                <a href="#" className="social-link">
-                  TK
-                </a>
-              </div> */}
             </div>
             <div className="footer-column">
               <h3>Quick Links</h3>
