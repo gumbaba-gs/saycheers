@@ -120,7 +120,7 @@ function App() {
               <p>
                 Our custom-designed booths feature destination-specific
                 branding, allowing you to commemorate your visit to landmarks
-                like Queen Victoria Market, Melbourne Airport, Sydney Opera
+                like Melbourne Location 1, Melbourne Airport, Sydney Opera
                 House, and many more to come.
               </p>
               <p>
@@ -182,10 +182,9 @@ function App() {
                 style={{ backgroundImage: `url(${qvm})` }}
               ></div>
               <div className="location-details">
-                <h3>Queen Victoria Market</h3>
+                <h3>Melbourne Location 1</h3>
                 <p>
-                  Melbourne's historic market featuring custom "Welcome to Queen
-                  Victoria Market" photo template.
+                  Melbourne's historic market featuring custom "Welcome to Melbourne Location 1" photo template.
                 </p>
                 <span className="coming-soon">Coming Soon</span>
               </div>
@@ -331,7 +330,7 @@ function App() {
           <div className="testimonial-container">
             <div className="testimonial-card">
               <div className="testimonial-text">
-                "We stumbled upon the Say Cheers booth at Queen Victoria Market and decided to give it a try. Best souvenir from our trip to Melbourne! We shared it instantly with family back home and they loved it."
+                "We stumbled upon the Say Cheers booth at Melbourne Location 1 and decided to give it a try. Best souvenir from our trip to Melbourne! We shared it instantly with family back home and they loved it."
               </div>
               <div className="testimonial-author">Sarah &amp; John, USA</div>
             </div>
@@ -506,7 +505,7 @@ function App() {
               <h3>Popular Locations</h3>
               <ul>
                 <li>
-                  <a href="#locations">Queen Victoria Market</a>
+                  <a href="#locations">Melbourne Location 1</a>
                 </li>
                 <li>
                   <a href="#locations">Melbourne Airport</a>
